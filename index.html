@@ -801,7 +801,6 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 <input type="radio" name="reportModal" id="rm-1" value="oui"><label for="rm-1">Oui, des alternatives existent</label>
 <input type="radio" name="reportModal" id="rm-2" value="non"><label for="rm-2">Non, l'avion est la seule option réaliste</label>
 </div>
-<p class="hint">Si non, un bonus de 10 points est appliqué pour reconnaître la contrainte modale.</p>
 </div>
 
 <div class="question">
@@ -827,7 +826,6 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 <input type="radio" name="num" id="n-1" value="oui"><label for="n-1">Oui</label>
 <input type="radio" name="num" id="n-2" value="non"><label for="n-2">Non</label>
 </div>
-<p class="hint">Si oui, un malus de 10 points est appliqué sur le score carbone.</p>
 </div>
 
 <div class="nav-buttons">
@@ -889,7 +887,8 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 </div>
 
 <div class="question">
-<span class="label">6. Inscrit dans un projet de coopération de long terme</span>
+<span class="label">6. Ce déplacement s’inscrit-il dans un projet de coopération de long terme ?
+/span>
 <div class="options">
 <input type="radio" name="lt" id="lt-1" value="oui"><label for="lt-1">Oui</label>
 <input type="radio" name="lt" id="lt-2" value="non"><label for="lt-2">Non</label>
@@ -897,7 +896,7 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 </div>
 
 <div class="question">
-<span class="label">7. Pensé en partenariat avec d'autres opérateurs culturels</span>
+<span class="label">7. Ce déplacement est-il pensé en partenariat avec d’autres opérateurs culturels ?</span>
 <div class="options">
 <input type="radio" name="part" id="pt-1" value="oui"><label for="pt-1">Oui</label>
 <input type="radio" name="pt-2" id="pt-2" value="non"><label for="pt-2">Non</label>
@@ -905,7 +904,7 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 </div>
 
 <div class="question">
-<span class="label">8. Permet de rencontrer une variété de professionnels</span>
+<span class="label">8. Ce déplacement permet-il de rencontrer une variété de professionnels différents ?</span>
 <div class="options">
 <input type="radio" name="var" id="vr-1" value="oui"><label for="vr-1">Oui</label>
 <input type="radio" name="var" id="vr-2" value="non"><label for="vr-2">Non</label>
@@ -917,13 +916,11 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 <div class="question">
 <span class="label">9. Nombre estimé de bénéficiaires (rendez vous publics: conférences, spectacles, ateliers)</span>
 <input type="number" id="rdvPublics" min="0" placeholder="50">
-<p class="hint">Malus de 5 points si moins de 50 bénéficiaires.</p>
 </div>
 
 <div class="question">
 <span class="label">10. Nombre estimé de bénéficiaires (rendez vous professionnels: formations, réseaux, ateliers)</span>
 <input type="number" id="rdvPros" min="0" placeholder="20">
-<p class="hint">Malus de 5 points si moins de 10 bénéficiaires.</p>
 </div>
 
 <div class="nav-buttons">
@@ -941,23 +938,23 @@ La note obtenue constitue un outil d’évaluation et un outil de suivi des prat
 <h3>Comprendre la note globale</h3>
 <div class="legend-item">
 <div class="legend-badge bg-A">A</div>
-<div class="legend-text"><strong>Note A.</strong> Mobilité pleinement alignée avec la démarche bas carbone.</div>
+<div class="legend-text"><strong>Note A.</strong> NOM A COMPLETER </div>
 </div>
 <div class="legend-item">
 <div class="legend-badge bg-B">B</div>
-<div class="legend-text"><strong>Note B.</strong> Mobilité solidement engagée, sur de bonnes bases.</div>
+<div class="legend-text"><strong>Note B.</strong> NOM A COMPLETER </div>
 </div>
 <div class="legend-item">
 <div class="legend-badge bg-C">C</div>
-<div class="legend-text"><strong>Note C.</strong> Mobilité aux fondations positives, marges de progrès identifiées.</div>
+<div class="legend-text"><strong>Note C.</strong> NOM A COMPLETER </div>
 </div>
 <div class="legend-item">
 <div class="legend-badge bg-D">D</div>
-<div class="legend-text"><strong>Note D.</strong> Mobilité à repenser ensemble pour gagner en durabilité.</div>
+<div class="legend-text"><strong>Note D.</strong> NOM A COMPLETER </div>
 </div>
 <div class="legend-item">
 <div class="legend-badge bg-E">E</div>
-<div class="legend-text"><strong>Note E.</strong> Mobilité qui invite à explorer des alternatives.</div>
+<div class="legend-text"><strong>Note E.</strong> NOM A COMPLETER </div>
 </div>
 </div>
 
@@ -1001,15 +998,15 @@ var paysPrioritaires = [
 ];
 
 var messagesDiversite = {
-  'A': 'Profil enrichissant fortement la diversité des mobilités soutenues par l\'Institut français. Votre présence contribue à élargir la représentation des publics dans les coopérations culturelles.',
-  'B': 'Profil apportant une vraie diversité aux échanges culturels internationaux.',
-  'C': 'Profil contribuant aux coopérations de l\'Institut français.'
+  'A': 'NOM A COMPLETER',
+  'B': 'NOM A COMPLETER,
+  'C': 'NOM A COMPLETER'
 };
 
 var messagesCarbone = {
-  'A': 'Empreinte carbone exemplaire. Cette mobilité illustre une trajectoire alignée avec les engagements climatiques.',
-  'B': 'Empreinte carbone maîtrisée. La durée du séjour et le mode de transport choisi témoignent d\'une attention aux émissions.',
-  'C': 'Empreinte carbone significative mais raisonnée. Allonger le séjour ou privilégier des modes doux pourrait renforcer l\'impact positif.',
+  'A': 'Empreinte carbone exemplaire.',
+  'B': 'Empreinte carbone maîtrisée. La durée du séjour et le mode de transport choisi témoignent d\'une attention aux émissions générées.',
+  'C': 'Empreinte carbone significative mais raisonnée. Allonger le séjour ou privilégier des modes de transports à faible impact (train notamment) pourrait renforcer l\'impact positif.',
   'D': 'Empreinte carbone importante. Un séjour plus long ou un changement de mode de transport amélioreraient sensiblement le bilan.',
   'E': 'Empreinte carbone élevée au regard de la durée. Plusieurs leviers permettent de progresser: allonger le séjour, privilégier le train quand c\'est possible, mutualiser le déplacement avec d\'autres projets.',
   'X': 'Saisissez le mode de transport et la distance pour obtenir une évaluation carbone complète.'
@@ -1022,11 +1019,11 @@ var messagesEffets = {
 };
 
 var messagesGlobaux = {
-  'A': 'Mobilité pleinement alignée avec la démarche bas carbone.',
-  'B': 'Mobilité solidement engagée, sur de bonnes bases.',
-  'C': 'Mobilité aux fondations positives, marges de progrès identifiées.',
-  'D': 'Mobilité à repenser ensemble pour gagner en durabilité.',
-  'E': 'Mobilité qui invite à explorer des alternatives.'
+  'A': 'NOM A COMPLETER.',
+  'B': 'NOM A COMPLETER.',
+  'C': 'NOM A COMPLETER.',
+  'D': 'NOM A COMPLETER.',
+  'E': 'NOM A COMPLETER.'
 };
 
 window.validerEcran = function(numeroEcran){
