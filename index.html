@@ -539,11 +539,11 @@ footer a { color: var(--if-blue); text-decoration: none; }
 <p>Cet outil mesure l'adéquation de votre déplacement professionnel avec une trajectoire bas carbone, dans un esprit de justice climatique.</p>
 <p>Trois scores complémentaires sont calculés:</p>
 <ul>
-<li><strong>Diversité sociale</strong> sur 50 points, inspirée de la norme AFNOR diversité.</li>
-<li><strong>Impact carbone</strong> sur 100 points, pondéré par la durée du séjour et le potentiel de report modal.</li>
-<li><strong>Effets utiles</strong> sur 50 points, mesurant les impacts positifs du projet.</li>
+<li><strong>Diversité sociale</strong> Le facteur de “diversité sociale” a été conçu en s'inspirant des critères de la norme AFNOR, afin de contextualiser l'impact carbone dans une trajectoire individuelle.</li>
+<li><strong>Impact carbone</strong> Le score “impact carbone” a pour objectif de mesurer l’impact de façon automatique afin de le rendre visible tout en le pondérant avec la durée du déplacement. </li>
+<li><strong>Effets utiles</strong> Le score “effets utiles” permet d’analyser les impacts positifs du projet afin de les pondérer avec l’impact environnemental et le facteur de "diversité sociale”. </li>
 </ul>
-<p>Durée estimée: 4 minutes. Vos réponses ne sont pas stockées, l'évaluation se fait localement dans votre navigateur.</p>
+<p>Durée estimée: 4 minutes.</p>
 <div class="nav-buttons" style="justify-content: flex-end; border-top: none; padding-top: 0;">
 <button class="btn-primary" onclick="goTo(1)">Commencer l'évaluation</button>
 </div>
@@ -555,7 +555,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 <p class="subtitle">Questions inspirées des 26 critères de la norme AFNOR diversité.</p>
 
 <div class="question">
-<span class="label">1. Identité de genre</span>
+<span class="label">1. Votre identité de genre</span>
 <div class="options">
 <input type="radio" name="genre" id="g-f" value="femme"><label for="g-f">Une femme</label>
 <input type="radio" name="genre" id="g-h" value="homme"><label for="g-h">Un homme</label>
@@ -565,7 +565,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 </div>
 
 <div class="question">
-<span class="label">2. Tranche d'âge</span>
+<span class="label">2. Votre tranche d'âge</span>
 <div class="options">
 <input type="radio" name="age" id="a-0" value="moins18"><label for="a-0">Moins de 18 ans</label>
 <input type="radio" name="age" id="a-1" value="1830"><label for="a-1">18 à 30 ans</label>
@@ -576,7 +576,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 </div>
 
 <div class="question">
-<span class="label">3. Pays de résidence</span>
+<span class="label">3. Votre pays de résidence</span>
 <select id="pays" onchange="toggleCP()">
 <option value="">— Sélectionnez un pays —</option>
 <optgroup label="France">
@@ -690,17 +690,15 @@ footer a { color: var(--if-blue); text-decoration: none; }
 <option value="XX">Autre pays</option>
 </optgroup>
 </select>
-<p class="hint">Liste indicative. Le bonus de 10 points concerne uniquement les pays inscrits dans les zones géographiques prioritaires de l'Institut français.</p>
 </div>
 
 <div class="question conditional" id="q-cp">
 <span class="label">4. Code postal de résidence en France</span>
 <input type="number" id="codePostal" min="0" max="99999" placeholder="33000">
-<p class="hint">Les codes hors sphères d'influence métropolitaines bénéficient d'un bonus de 5 points.</p>
 </div>
 
 <div class="question">
-<span class="label">5. Personnes à charge (enfants, personnes aidées)</span>
+<span class="label">5. Avez-vous des personnes à charge (enfants, personnes aidées) ?</span>
 <div class="options">
 <input type="radio" name="pac" id="pac-1" value="oui"><label for="pac-1">Oui</label>
 <input type="radio" name="pac" id="pac-2" value="non"><label for="pac-2">Non</label>
@@ -709,7 +707,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 </div>
 
 <div class="question">
-<span class="label">6. Situation de handicap</span>
+<span class="label">6. Êtes-vous une personne en situation de handicap ? </span>
 <div class="options">
 <input type="radio" name="hand" id="h-1" value="oui"><label for="h-1">Oui</label>
 <input type="radio" name="hand" id="h-2" value="non"><label for="h-2">Non</label>
@@ -717,7 +715,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 </div>
 
 <div class="question">
-<span class="label">7. Lanceur d'alerte, journaliste, syndicaliste, militant, dignitaire religieux</span>
+<span class="label">7. Êtes-vous lanceur d’alerte, journaliste, syndicaliste, militant, dignitaire religieux ?</span>
 <div class="options">
 <input type="radio" name="vuln" id="v-1" value="oui"><label for="v-1">Oui</label>
 <input type="radio" name="vuln" id="v-2" value="non"><label for="v-2">Non</label>
@@ -725,7 +723,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 </div>
 
 <div class="question">
-<span class="label">8. Fonctions de direction dans votre organisation</span>
+<span class="label">Exercez-vous des fonctions de direction au sein de votre organisation ?</span>
 <div class="options">
 <input type="radio" name="dir" id="d-1" value="oui"><label for="d-1">Oui</label>
 <input type="radio" name="dir" id="d-2" value="non"><label for="d-2">Non</label>
@@ -735,7 +733,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 </div>
 
 <div class="question">
-<span class="label">9. Budget annuel de l'organisation</span>
+<span class="label">9. Quel est le budget annuel de fonctionnement/CA de votre organisation ?</span>
 <div class="options">
 <input type="radio" name="bud" id="b-1" value="petit"><label for="b-1">Moins de 100 000 euros</label>
 <input type="radio" name="bud" id="b-2" value="grand"><label for="b-2">Plus de 100 000 euros</label>
@@ -767,7 +765,7 @@ footer a { color: var(--if-blue); text-decoration: none; }
 <div class="question">
 <span class="label">Distance aller simple en kilomètres</span>
 <input type="number" id="distance" min="0" placeholder="850">
-<a href="#" id="lienMaps" target="_blank" rel="noopener" class="helper-link" style="display:none">Estimer la distance sur Google Maps →</a>
+<a href="#" id="lienMaps" target="_blank" rel="noopener" class="helper-link" style="display:none">Estimer la distance sur ViaMichelin</a>
 <p class="hint">Renseignez le kilométrage aller simple. Le calcul de l'aller-retour est effectué automatiquement.</p>
 </div>
 
@@ -1039,7 +1037,7 @@ window.majLienMaps = function(){
   var arr = document.getElementById('villeArrivee').value.trim();
   var lien = document.getElementById('lienMaps');
   if(dep && arr){
-    var url = 'https://www.google.com/maps/dir/' + encodeURIComponent(dep) + '/' + encodeURIComponent(arr);
+    var url = 'https://www.viamichelin.fr/itineraires?departure=' + encodeURIComponent(dep) + '&arrival=' + encodeURIComponent(arr);
     lien.href = url;
     lien.style.display = 'inline-flex';
   } else {
